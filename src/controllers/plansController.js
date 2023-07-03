@@ -17,9 +17,10 @@ const getPlanById = async (req, res) => {
 
 const createPlan = async (req, res) => {
     console.log('chegou');
+    console.log(req.body)
     const { cardImage, titleCard, titleColor, planValue, buttonColor, textButtonColor, iconButtonColor } = req.body;
 
-    if (!cardImage || !titleCard || !titleColor || !planValue || !buttonColor || !textButtonColor || !iconButtonColor) return res.status(404).json({ message: 'All fields must be filled' });
+    if (!cardImage || !titleCard || !titleColor || !buttonColor || !textButtonColor || !iconButtonColor) return res.status(404).json({ message: 'All fields must be filled' });
 
     const newPlan = await plansRepository.createPlan({ cardImage, titleCard, titleColor, planValue, buttonColor, textButtonColor, iconButtonColor });
 

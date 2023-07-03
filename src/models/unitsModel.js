@@ -10,6 +10,12 @@ const Units = sequelize.define('units', {
         allowNull: false
     },
 
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+
+    
     address: {
         type: DataTypes.STRING,
         allowNull: false,
