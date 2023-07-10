@@ -46,7 +46,7 @@ const Plans = sequelize.define('Plans', {
         allowNull: false,
     }
     
-}, {
+},  {
     tableName: 'plans',
     timestamps: false,
 });
